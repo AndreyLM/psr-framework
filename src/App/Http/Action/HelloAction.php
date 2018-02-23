@@ -8,8 +8,8 @@ class HelloAction
 {
     public function __invoke(ServerRequestInterface $request)
     {
-        $name = $request->getQueryParams()['name'] ? $request->getQueryParams()['name'] : 'Guest';
+        $name = isset($request->getQueryParams()['name']) ? $request->getQueryParams()['name'] : 'Guest';
 
-        return new HtmlResponse('Hello, '.$name,'!');
+        return new HtmlResponse('Hello, '. $name.'!');
     }
 }
