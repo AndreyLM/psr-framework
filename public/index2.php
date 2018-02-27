@@ -41,5 +41,6 @@ try {
 }
 
 $response = $response->withHeader('X-Developer', 'AndrewLM');
+
 $emitter = new SapiEmitter();
 $emitter->emit($response);

@@ -3,13 +3,13 @@
       "sort-packages": true
     },
     "require": {
-        "php": ">=7",
+        "php": ">=7.1",
         "aura/router": "^3.1",
         "http-interop/http-middleware": "^0.5.0",
         "psr/http-message": "^1.0",
-        "roave/security-advisories": "dev-master",
         "zendframework/zend-diactoros": "^1.7",
         "zendframework/zend-stratigility": "^2.1"
+
     },
     "autoload": {
       "psr-4": {
@@ -18,6 +18,6 @@
       }
     },
     "require-dev": {
-        "phpunit/phpunit": "^7.0"
+        "phpunit/phpunit": "*"
     }
 }
