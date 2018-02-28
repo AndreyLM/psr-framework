@@ -83,6 +83,7 @@ class MiddlewarePipe implements ServerMiddlewareInterface
             $delegate = new Delegate\CallableDelegateDecorator($delegate, $response);
         }
 
+
         return $this->process($request, $delegate);
     }
 

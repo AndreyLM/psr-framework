@@ -5,7 +5,7 @@ namespace App\Http\Action;
 use Framework\Middleware\BasicAuthMiddleware;
 use Psr\Http\Message\ServerRequestInterface;
 use Zend\Diactoros\Response\HtmlResponse;
-use Zend\Diactoros\Response\JsonResponse;
+
 
 class CabinetAction
 {

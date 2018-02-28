@@ -43,8 +43,8 @@ $router = new AuraRouterAdapter($aura);
 $app = new Application(new Response(), new NotFoundHandler());
 
 $app->pipe(new ErrorHandler($params['debug']));
-$app->pipe(new TimeProfilerMiddleware());
-$app->pipe(new CredentialsMiddleware());
+$app->pipe(TimeProfilerMiddleware::class);
+$app->pipe(CredentialsMiddleware::class);
 $app->pipe(new BasicAuthMiddleware($params['users']));
 $app->pipe(new RouterMiddleware($router));
 

@@ -19,6 +19,8 @@ class ComposerStaticInit4c560eed4b8dbfdcfd40dc85ba92baba
         'Z' => 
         array (
             'Zend\\Stratigility\\' => 18,
+            'Zend\\Stdlib\\' => 12,
+            'Zend\\ServiceManager\\' => 20,
             'Zend\\Escaper\\' => 13,
             'Zend\\Diactoros\\' => 15,
         ),
@@ -31,10 +33,12 @@ class ComposerStaticInit4c560eed4b8dbfdcfd40dc85ba92baba
         array (
             'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
+            'Psr\\Container\\' => 14,
         ),
         'I' => 
         array (
             'Interop\\Http\\Server\\' => 20,
+            'Interop\\Container\\' => 18,
         ),
         'F' => 
         array (
@@ -63,6 +67,14 @@ class ComposerStaticInit4c560eed4b8dbfdcfd40dc85ba92baba
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-stratigility/src',
         ),
+        'Zend\\Stdlib\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-stdlib/src',
+        ),
+        'Zend\\ServiceManager\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-servicemanager/src',
+        ),
         'Zend\\Escaper\\' => 
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-escaper/src',
@@ -87,9 +99,17 @@ class ComposerStaticInit4c560eed4b8dbfdcfd40dc85ba92baba
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
+        'Psr\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
         'Interop\\Http\\Server\\' => 
         array (
             0 => __DIR__ . '/..' . '/http-interop/http-middleware/src',
+        ),
+        'Interop\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/container-interop/container-interop/src/Interop/Container',
         ),
         'Framework\\' => 
         array (
