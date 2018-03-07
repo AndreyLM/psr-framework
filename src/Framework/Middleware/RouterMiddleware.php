@@ -3,6 +3,7 @@ namespace Framework\Middleware;
 
 
 
+use Framework\Application;
 use Framework\Http\Router\ActionResolver;
 use Framework\Http\Router\Exception\RequestNotMatchedException;
 use Framework\Http\Router\IRouter;
@@ -13,12 +14,12 @@ use Zend\Diactoros\Response\HtmlResponse;
 class RouterMiddleware
 {
     private $router;
-    private $resolver;
+    private $app;
 
-    public function __construct(IRouter $router)
+    public function __construct(IRouter $router, Application $application)
     {
         $this->router = $router;
-        $this->resolver = new ActionResolver();
+        $this->app = $application;
     }
 
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response, callable $next)
@@ -29,10 +30,10 @@ class RouterMiddleware
                 $request = $request->withAttribute($attribute, $value);
             }
 
-            $action = $this->resolver->resolve($result->getHandler());
+            $action = $this->app->resolve($result->getHandler(), $response);
             /* @var $response ResponseInterface */
 
-            return $action($request);
+            return $action($request, $response, $next);
 
         } catch (RequestNotMatchedException $e) {
             return new HtmlResponse('Undefined page 2', 404);

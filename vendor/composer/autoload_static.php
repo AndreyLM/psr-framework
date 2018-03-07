@@ -35,6 +35,10 @@ class ComposerStaticInit4c560eed4b8dbfdcfd40dc85ba92baba
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
         ),
+        'L' => 
+        array (
+            'League\\Plates\\' => 14,
+        ),
         'I' => 
         array (
             'Interop\\Http\\Server\\' => 20,
@@ -102,6 +106,10 @@ class ComposerStaticInit4c560eed4b8dbfdcfd40dc85ba92baba
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'League\\Plates\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/plates/src',
         ),
         'Interop\\Http\\Server\\' => 
         array (

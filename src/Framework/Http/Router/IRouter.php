@@ -29,4 +29,6 @@ interface IRouter
      * @return string
      */
     public function generate($name, array $params): string;
+
+    public function addRoute($name, $path, $handler, $methods, $options) : void;
 }
