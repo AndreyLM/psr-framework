@@ -1,8 +1,9 @@
 <?php
 
 return $params = [
-    'debug' => false,
+    'debug' => true,
     'users' => [
-        'admin' => 'password',
-    ]
+        'admin3' => 'password',
+    ],
+    'template' => 'views'
 ];

@@ -1,7 +1,7 @@
 <?php
 use App\Http\Action;
 
-$domainName = '/custom-framework/public';
+$domainName = '/psr-framework/public';
 
 /* @var $app Framework\Application */
 $app->get('home', $domainName.'/', Action\HelloAction::class);

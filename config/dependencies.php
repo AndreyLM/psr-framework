@@ -7,6 +7,9 @@ use Framework\Http\Router\IRouter;
 use Framework\Middleware\BasicAuthMiddleware;
 use Framework\Middleware\ErrorHandler;
 use Framework\Middleware\NotFoundHandler;
+use Framework\Template\ITemplateRenderer;
+use Framework\Template\Php\PlateAdapter;
+use League\Plates\Engine;
 use Psr\Container\ContainerInterface;
 use Zend\Diactoros\Response;
 
@@ -27,5 +30,10 @@ return [
         ErrorHandler::class => function(ContainerInterface $container) {
             return new ErrorHandler($container->get('config')['debug']);
         },
+        ITemplateRenderer::class => function(ContainerInterface $container) {
+            return new PlateAdapter(new Engine(
+                $container->get('config')['template']
+            ));
+        }
     ],
 ];
