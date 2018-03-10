@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Action;
 
+use Framework\Template\ITemplateRenderer;
 use League\Plates\Engine;
 use Psr\Http\Message\ServerRequestInterface;
 use Zend\Diactoros\Response\HtmlResponse;
@@ -13,7 +14,7 @@ class HelloAction
      */
     private $template;
 
-    public function  __construct(Engine $template)
+    public function  __construct(ITemplateRenderer $template)
     {
         $this->template = $template;
     }
@@ -22,6 +23,6 @@ class HelloAction
     {
         $name = isset($request->getQueryParams()['name']) ? $request->getQueryParams()['name'] : 'Guest';
 
-        return new HtmlResponse('Hello, '. $name.'!');
+        return new HtmlResponse($this->template->render('HelloAction', []));
     }
 }
