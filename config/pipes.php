@@ -9,7 +9,7 @@ use Framework\Middleware\TimeProfilerMiddleware;
 /* @var $params array */
 /* @var $app Framework\Application */
 /* @var $container Zend\ServiceManager\ServiceManager */
-$domainName = '/psr-framework/public';
+$domainName = '/custom-framework/public';
 
 $app->pipe(ErrorHandler::class);
 $app->pipe(TimeProfilerMiddleware::class);

@@ -1,0 +1,12 @@
+{% extends 'twig/layouts/main.twig' %}
+
+{% block title %}{{ parent() }} hello{% endblock %}
+{% block breadcrumbs %}    <ul class="breadcrumb">
+	<li><a href="{{ path('home') }}">Home</a></li>
+	<li class="active">Hello</li>
+	</ul>{% endblock %}
+
+{% block content %}
+	<p>Hello</p>
+	
+{% endblock %}

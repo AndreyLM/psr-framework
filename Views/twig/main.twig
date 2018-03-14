@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block head %}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <style>
+        body { padding-top: 70px; }
+        .app { display: flex; min-height: 100vh; flex-direction: column; }
+        .app-content { flex: 1; }
+        .app-footer { padding-bottom: 1em; }
+    </style>
+    {% endblock %}
+</head>
+<body class="app">
+
+{#{% include 'partials\header.twig' %}#}
+
+
+
+
+
+
+<div class="app-content">
+    <ul>
+        <li><a href="/about"><i class="glyphicon glyphicon-book"></i> About 2</a></li>
+        <li><a href="/cabinet"><i class="glyphicon glyphicon-user"></i> Cabinet 2</a></li>
+    </ul>
+    <main class="container">
+
+        {% block content %}{% endblock %}
+
+    </main>
+</div>
+
+{#{% include 'partials\footer.twig' %}#}
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>

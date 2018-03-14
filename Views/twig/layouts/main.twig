@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{% block title %}PSR-Framework{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    {% block meta %}{% endblock %}
+    <style>
+        body { padding-top: 70px; }
+        .app { display: flex; min-height: 100vh; flex-direction: column; }
+        .app-content { flex: 1; }
+        .app-footer { padding-bottom: 1em; }
+    </style>
+   
+</head>
+<body class="app">
+
+{% include 'twig/partials/header.twig' %}
+
+
+<div class="app-content">
+    <main class="container">
+        <div class="row">
+            {% block breadcrumbs %} {% endblock %}
+        </div>
+        <div class="row">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+</div>
+
+{% include 'twig/partials/footer.twig' %}
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

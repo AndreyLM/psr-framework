@@ -9,6 +9,7 @@ class ComposerStaticInit4c560eed4b8dbfdcfd40dc85ba92baba
     public static $files = array (
         'aaf5b53a99b4de51dadc23016def253f' => __DIR__ . '/..' . '/webimpress/http-middleware-compatibility/autoload/http-middleware.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -28,6 +29,14 @@ class ComposerStaticInit4c560eed4b8dbfdcfd40dc85ba92baba
         array (
             'Webmozart\\Assert\\' => 17,
             'Webimpress\\ComposerExtraDependency\\' => 35,
+        ),
+        'T' => 
+        array (
+            'Twig\\' => 5,
+        ),
+        'S' => 
+        array (
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
         ),
         'P' => 
         array (
@@ -57,6 +66,7 @@ class ComposerStaticInit4c560eed4b8dbfdcfd40dc85ba92baba
         array (
             'Aura\\Router\\' => 12,
             'App\\' => 4,
+            'Actions\\' => 8,
         ),
     );
 
@@ -94,6 +104,14 @@ class ComposerStaticInit4c560eed4b8dbfdcfd40dc85ba92baba
         'Webimpress\\ComposerExtraDependency\\' => 
         array (
             0 => __DIR__ . '/..' . '/webimpress/composer-extra-dependency/src',
+        ),
+        'Twig\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twig/twig/src',
+        ),
+        'Symfony\\Polyfill\\Mbstring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
         ),
         'Psr\\Log\\' => 
         array (
@@ -139,9 +157,20 @@ class ComposerStaticInit4c560eed4b8dbfdcfd40dc85ba92baba
         array (
             0 => __DIR__ . '/../..' . '/src/App',
         ),
+        'Actions\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Actions',
+        ),
     );
 
     public static $prefixesPsr0 = array (
+        'T' => 
+        array (
+            'Twig_' => 
+            array (
+                0 => __DIR__ . '/..' . '/twig/twig/lib',
+            ),
+        ),
         'P' => 
         array (
             'Prophecy\\' => 
